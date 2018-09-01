@@ -2,7 +2,7 @@
 """
 ___license___      = "MIT"
 ___title___        = "DanziApp"
-___dependencies___ = ["app", "database", "http_client", "wifi","ugfx"]
+___dependencies___ = ["app", "database", "http_client", "wifi","ugfx_helper"]
 ___categories___   = ["emf"]
 ___bootstrapped___ = False
 
