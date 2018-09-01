@@ -2,11 +2,11 @@
 """
 ___license___      = "MIT"
 ___title___        = "DanziApp"
-___dependencies___ = ["app", "database"]
+___dependencies___ = ["app", "database", "http_client", "wifi","ugfx"]
 ___categories___   = ["emf"]
 ___bootstrapped___ = False
 
-import http_client, ujson, wifi, time, ugfx
+import http_client, wifi, time, ugfx
 from tilda import buttons
 
 # Set up URL data
@@ -22,6 +22,8 @@ neo = pyb.Neopix(pin)
 buttons.init()
 NUM_BTNS = dir(Buttons)[:10]
 
+# Set up graphics
+ugfx_helper.init()
 
 def tick():
 	for btn in NUM_BTNS:
