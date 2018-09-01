@@ -2,7 +2,7 @@
 """
 ___license___      = "MIT"
 ___title___        = "DanziApp"
-___dependencies___ = ["app", "database", "wifi","ugfx_helper"]
+___dependencies___ = []
 ___categories___   = ["emf"]
 ___bootstrapped___ = False
 
@@ -47,10 +47,5 @@ ugfx.set_default_font(ugfx.FONT_SMALL)
 # 			neo.display(0x880000)
 # 			ugfx.text(1, 30, "Bad Response:" + resp.text, ugfx.WHITE)
 # 		time.sleep(1)
-
-while 1:
-	#tick()
-	time.sleep(1)
-	ugfx.clear() #ugfx.html_color(0x002e5c)
-	ugfx.text(1, 10, "Hello World!", ugfx.WHITE)
-	time.sleep(1)
+ugfx.clear() #ugfx.html_color(0x002e5c)
+ugfx.text(1, 10, "Hello World!", ugfx.WHITE)
