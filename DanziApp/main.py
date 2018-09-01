@@ -26,3 +26,6 @@ def sendReq(btnNum):
 	with http_client.post('http://'+URL, urlencoded=params) as resp:
 		if resp.text == "OK": print("woo")
 		else: print("wat")
+
+while 1:
+	tick()
