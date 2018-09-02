@@ -2,12 +2,12 @@
 """
 ___license___      = "MIT"
 ___title___        = "DanziApp"
-___dependencies___ = ["wifi","sleep","http","app"]
+___dependencies___ = ["wifi","sleep","http"]
 ___categories___   = ["emf"]
 ___bootstrapped___ = False
 
-import ugfx, http, wifi, sleep 
-from tilda import Buttons
+import ugfx, http, sleep 
+#from tilda import Buttons
 
 # Set up graphics
 ugfx.clear()
@@ -23,16 +23,16 @@ params = "?btn="
 # neo = pyb.Neopix(pin)
 
 # set up buttons
-Buttons.init()
-NUM_BTNS = dir(Buttons)[:10]
+#Buttons.init()
+#NUM_BTNS = dir(Buttons)[:10]
 
 ugfx.clear(ugfx.html_color(0xff8800))
 
 def tick():
 	ugfx.clear(ugfx.html_color(0x00ff00))
-	for btn in NUM_BTNS:
-		if Buttons.is_pressed(btn):
-			sendReq(str(btn))
+#	for btn in NUM_BTNS:
+#		if Buttons.is_pressed(btn):
+#			sendReq(str(btn))
 	ugfx.clear(ugfx.html_color(0x00ffff))
 
 def sendReq(btnNum):
@@ -40,8 +40,6 @@ def sendReq(btnNum):
 	ugfx.text(1, 10, "You pressed " + str(btnNum), ugfx.WHITE)
 	#neo.display(0x888888)
 	time.sleep(0.2)
-	if (not wifi.nic().is_connected()):
-		return False;
 	with http.get('http://'+URL, urlencoded=params+str(btnNum)) as resp:
 		if resp.text == "OK": 
 			#neo.display(0x008800)
