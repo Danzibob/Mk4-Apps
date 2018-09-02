@@ -9,6 +9,9 @@ ___bootstrapped___ = False
 import ugfx, http, wifi, sleep 
 from tilda import Buttons
 
+# Set up graphics
+ugfx.clear()
+
 ugfx.clear(ugfx.html_color(0xff0000))
 
 #Set up URL data
@@ -24,12 +27,6 @@ Buttons.init()
 NUM_BTNS = dir(Buttons)[:10]
 
 ugfx.clear(ugfx.html_color(0xff8800))
-
-# Set up graphics
-ugfx.init()
-ugfx.clear()
-
-ugfx.clear(ugfx.html_color(0xffff00))
 
 def tick():
 	ugfx.clear(ugfx.html_color(0x00ff00))
@@ -52,6 +49,8 @@ def sendReq(btnNum):
 		else: 
 			#neo.display(0x880000)
 			ugfx.text(1, 30, "Bad Response:" + resp.text, ugfx.WHITE)
+
+ugfx.clear(ugfx.html_color(0xffff00))
 
 try:
 	while 1:
