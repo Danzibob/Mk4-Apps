@@ -6,14 +6,15 @@ ___dependencies___ = ["wifi","sleep","http"]
 ___categories___   = ["emf"]
 ___bootstrapped___ = False
 
-import ugfx, http, sleep 
+print("Hello world")
+
+import ugfx, http, sleep#, buttons
 #from tilda import Buttons
 
 # Set up graphics
-ugfx.clear()
-
 ugfx.clear(ugfx.html_color(0xff0000))
 
+print("Woo graphics")
 #Set up URL data
 URL = "94.45.255.37:9099"
 params = "?btn="
@@ -56,3 +57,4 @@ try:
 except e:
 	ugfx.clear(ugfx.html_color(0x002e5c))
 	ugfx.text(1, 10, str(e), ugfx.WHITE)
+	
