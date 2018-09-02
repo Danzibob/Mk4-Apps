@@ -2,9 +2,9 @@
 """
 ___license___      = "MIT"
 ___title___        = "DanziApp"
-___dependencies___ = ["wifi","sleep","http"]
-___categories___   = ["emf"]
-___bootstrapped___ = False
+___dependencies___ = ["sleep","wifi","http"]
+___categories___   = ["Other"]
+___bootstrapped___ = True
 
 print("Hello world")
 
@@ -57,4 +57,3 @@ try:
 except e:
 	ugfx.clear(ugfx.html_color(0x002e5c))
 	ugfx.text(1, 10, str(e), ugfx.WHITE)
-	
